@@ -1,0 +1,53 @@
+클래스
+	필드와 메소드로 구성
+
+ADT(Abstract Data Type) : 추상 자료형
+	기능의 구현 부분을 나타내지 않고 순수한 기능이 무엇인지 나열한 것을 추상 자료형
+
+컬렉션(collection) : 요소(element)라고 불리는 가변 개수 객체들의 저장소
+제너릭(generic) : 특정 타입만 다루지 않고 여러 종류의 타입으로 변신할 수 있도록 클래스나 메소드를 일반화시키는 기법
+
+자료구조
+	순차적(선형구조) : list(array(배열) / linked(연결)), stack, queue 	
+	비순차적(비선형 구조) : tree, heap
+ 
+List
+	배열 : 공간이 한정되어 있다.
+		add() : 배열에서 데이터를 추가한다.
+		remove() : 배열에서 데이터를 제거한다.
+	연결 : 노드를 포인터로 연결한다.
+		append() : 리스트에서 데이터를 추가(마지막에 위치)
+
+Node
+	구조체로 구현하며, 데이터와 다음 노드를 가리키는 포인터로 이루어져 있다.
+
+데이터 삽입		add()
+맨 마지막에 데이터 삽입	append()
+데이터 삭제		remove()
+데이터 가져오기		get()
+데이터 설정		set() 	-->	 item[] 
+데이터 위치 검색		indexof()		numItem
+데이터가 비어있는지 확인	isEmpty() 
+(문자열이 "" 처럼 비어있으면 true)
+데이터 초기화		clear()
+데이터 길이 구하기		len()
+
+UML 표기법
+클래스명(IntegerArrayList)
+(-) : private 선언
+- int num
+-private int num
+(+) : public 선언
+
+알고리즘
+	프로그래밍을 할 때 해야할 방법과 절차
+append(d):
+	item[numItem] <-- x
+	numItem++
+add(k,x):
+	if(numItem >= item.length || k < 0 || k > numItem)
+		// error 처리 구문
+else
+	for i <-- numItem - 1 downto k
+		item[i + 1] <-- Item[i]
+		item[k] <-- x
