@@ -1,0 +1,42 @@
+수업시간
+토 : 2:00~(최대)8:00
+일 : 2:00~6:00
+강의 녹화 X, 그러므로 녹화하려면 미리 요청할 것
+수업 자료는 강의 하루 전날 구글 드라이브에 업로드됨
+
+yoonkwanghee1225@naver.com
+
+1. 문제 풀 때 인터넷에서 찾아보지 말고 직접 풀 것(못 풀면 되는 곳까지)
+2. 모르면 모른다고 얘기할 것(서면, 메일)
+3. 질문할 내용이 있으면 질문할 것
+
+자료구조
+	List
+	Stack
+	Queue
+	Tree
+	Heap
+	Sort
+
+-->	그래프
+
+	public class Test {
+		// public static void main(String[] args) {
+		
+		}
+	}
+
+연관 종속(클래스와 클래스 관계)
+	is ~ a 
+	has ~ a 
+
+배열(Array) : 코딩테스트에서 가장 많이 출제(80% 출제)
+
+메소드와 함수의 차이
+	 함수(Funtion)와 메소드(Method)의 차이는 간단하게 설명하자면 함수는 독립적으로 존재하고 메소드는 Class에 종속적인 함수이다.
+
+	class object
+
+	class Test {
+		Test test = new Test();
+	}
