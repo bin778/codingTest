@@ -27,7 +27,6 @@ public class Ex2 {
 					temp[count++] = 0;
 				}
 			}
-			
 			// 중복이 아니면 temp 배열에 값을 저장
 			if(!flag) {
 				temp[count++] = arr[i];

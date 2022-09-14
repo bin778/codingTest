@@ -20,18 +20,14 @@ public class Ex2 {
 		// for문을 이용해 중복 제거
 		// arr[i]와 temp[j]의 값이 같다면 중복이므로 0으로 변환
 		for (int i = 0; i < arr.length; i++) {
-			boolean flag = false;
 			for (int j = 0; j < arr.length; j++) {
-				if (arr[i] == temp[j]) {
-					flag = true;
+//				System.out.println(Arrays.toString(temp));
+				if (arr[i] == temp[j])
 					temp[count++] = 0;
-				}
+				else
+					temp[count++] = arr[i];
 			}
-			
-			// 중복이 아니면 temp 배열에 값을 저장
-			if(!flag) {
-				temp[count++] = arr[i];
-			}
+//			System.out.println(i + 1 + "번째 검사 완료");
 		}
 
 		// 중복을 제거한 배열을 result 배열에 저장
