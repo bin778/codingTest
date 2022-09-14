@@ -26,7 +26,9 @@ public class Ex2 {
 					flag = true;
 					temp[count++] = 0;
 				}
+				System.out.print(flag + " ");
 			}
+			
 			// 중복이 아니면 temp 배열에 값을 저장
 			if(!flag) {
 				temp[count++] = arr[i];

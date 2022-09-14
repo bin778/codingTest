@@ -26,11 +26,14 @@ public class Ex2 {
 					flag = true;
 					temp[count++] = 0;
 				}
+				System.out.print(flag + " ");
 			}
+			
 			// 중복이 아니면 temp 배열에 값을 저장
 			if(!flag) {
 				temp[count++] = arr[i];
 			}
+			System.out.println("");
 		}
 
 		// 중복을 제거한 배열을 result 배열에 저장
