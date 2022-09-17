@@ -42,5 +42,4 @@ public class ArrList<E> {
     	a = (E[])o;
     }
     
-    // 리스트의 삭제
 }
