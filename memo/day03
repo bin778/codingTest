@@ -38,3 +38,54 @@ List -> 1. 배열 리스트 -> 오버플로우. 즉, 값이 초과될 가능성�
         3. 원형 리스트
         
 참조(Reference)변수 : 값이 저장되는 변수. 즉, 참조변수는 주소값이 저장되어 있다.
+
+ArrList ==> 1. 탐색, 2. 삽입, 3. 삭제
+
+  // 리스트의 삭제
+  public E peek(int k) { // k번째 저장된 항목을 검색, a[k]
+    if(size == 0) { // 항목(X)
+      throw new NoSuchElementException; // 프로그램 stop
+    }
+  return a[k];
+  }
+  
+  // 리스트의 삽입
+  public void insertLast(E newItem) {
+    if(size == a.length)
+      resize(2*a.length); // a의 사이즈를 2배로 늘린다.
+    a[size++] = newItem;
+  }
+  
+  public void insertLast(E newItem) {
+    if(size == a.length) {
+      resize(2*a.length);
+      for(int i = size -1; i >= k; i--) {
+        a[i + 1] = a[i];
+      }
+    a[k] = newItem;
+    a[size++];
+    }
+  }
+  
+자바 메인 메모리 == 1. 프로그램이랑 static 데이터가 저장되는 영역
+                   2. heap 영역 : 객체 ---------------------------- 가비지
+                   3. stack 영역 : 변수 / 메소드
+                     
+  public void resize(int newSize) {
+    Object[] o = new Object[newSize];
+    for (int i = 0; i < size; i++)
+      o[i] = a[i];
+    a = (E[])o;
+  }
+
+삭제 연산
+  public E delete(int k) {
+    if(isEmpty()) throw new NoSuchElementException();
+
+    E item = a[k];
+    for(int i = k; i < size; i++)
+      a[i] = a[i + 1];
+    size--;
+    
+    return item;
+  }
