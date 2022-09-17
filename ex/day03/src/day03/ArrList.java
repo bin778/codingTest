@@ -19,6 +19,7 @@ public class ArrList<E> {
         public ListNode(int data) {  }
     }
     
+    // 리스트의 삭제
     public E peek(int k) { // k번째 저장된 항목을 검색, a[k]
     	if(size == 0) { // 항목(X)
     		throw new NoSuchElementException(); // 프로그램 stop
@@ -26,5 +27,20 @@ public class ArrList<E> {
     	return a[k];
     }
     
+    // 리스트의 삽입
+    public void insertLast(E newItem) {
+    	if(size == a.length)
+    		resize(2*a.length); // a의 사이즈를 2배로 늘린다.
+    	a[size++] = newItem;
+    }
     
+    // resize() 메소드
+    public void resize(int newSize) {
+    	Object[] o = new Object[newSize];
+    	for (int i = 0; i < size; i++)
+    		o[i] = a[i];
+    	a = (E[])o;
+    }
+    
+    // 리스트의 삭제
 }
