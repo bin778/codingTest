@@ -34,10 +34,12 @@ public class ArrList<E> {
     	a[size++] = newItem;
     }
     
-    // resize() 메소드
+    // resize() 메소드, 배열의 길이를 재정의
     public void resize(int newSize) {
+    	// 배열 타입을 알 수 없기 때문에 Object로 정의
     	Object[] o = new Object[newSize];
-    	for (int i = 0; i < size; i++)
+    	// 새롭게 만든 배열의 길이를 for문으로 재정의한다
+    	for (int i = 0; i < size; i++) 
     		o[i] = a[i];
     	a = (E[])o;
     }
