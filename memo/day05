@@ -37,3 +37,25 @@ Q2) 자료를 입력하시오(Scanner사용)
     21 -> 43 -> 50 -> 74 -> null;
   
 Q3) LinkedList1을 for문의 형식으로 변경 (kim, lee, park, song) ==> 배열화 하여 작업
+
+중첩 클래스(이너 클래스) ==> 클래스 안에 클래스 선언
+  public class A {
+    class Node {
+      멤버 필드, 메소드, 생성자 --> 은닉화, 캡슐화
+    }  
+  }
+익명 내부 클래스 : Listener(GUI) new Test(new Listener() {
+  
+});
+이너 클래스
+A.class
+A$Node.class
+A$1Node.class
+
+Q4) 출력 결과
+1) 리스트 출력
+  15 -> 35 -> 67 -> 87 -> null
+2) 원소 28 삽입
+  15 -> 28 -> 35 -> 67 -> 87 -> null
+3) 원소 45 삽입
+  15 -> 28 -> 35 -> 45 -> 67 -> 87 -> null  
