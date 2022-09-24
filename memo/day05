@@ -59,3 +59,37 @@ Q4) 출력 결과
   15 -> 28 -> 35 -> 67 -> 87 -> null
 3) 원소 45 삽입
   15 -> 28 -> 35 -> 45 -> 67 -> 87 -> null  
+
+알고리즘
+intNode.data = x; // 노드의 데이터
+inaNode.link = L; // L 노드 앞에 inaNode 연결
+L = inaNode; // L --> inaNode
+
+Node search(Node L, int x) { // 삽입할 위치 검색(단, 알고리즘이기 때문에 error 발생할 수 있음!!)
+  Node tmp = L;
+  Node position = L; // position은 삽입할 위치의 앞 노드
+  while(tmp != null && x > (Integer)tmp.data) {
+    position = tmp;
+    tmp = tmp.link;
+  }
+  return position;
+}
+
+tmp = position.link; // pos 후행 노드를 tmp가 가리킴
+position.link = inaNode; // pos뒤에 삽입할 노드 inaNode 연결
+inaNode.data = x; // inaNode의 자료에 데이터 저장
+inaNode/link = tmp; // inaNode 뒤에 tmp 연결
+
+Node obj = new Node();
+Node L = null;
+L = obj.makeN();
+L = obj.insert(L,28);
+L = obj.insert(L,45);
+L = obj.insert(L,7);
+
+class Node {
+  Object data;
+  Node link;
+  
+  Node makeN() 
+}
