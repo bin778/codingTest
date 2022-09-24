@@ -1,0 +1,39 @@
+연결 / 배열
+
+Q1)
+선형리스트 = 배열리스트
+리스트 L = { Kim, Lee, Park, Song };
+
+선형리스트 (L)
+Kim   Lee   Park  Song
+L0    L1    L2    L3
+
+연결 리스트
+[Kim][-]-[Lee][-]-[Park][-]-[Song][-]-NULL
+
+String name = NULL
+
+String name1 = "길동";
+String name2 = "길동";
+-------------------------------------
+String name1 = "길동";
+name2 = "순신";
+-------------------------------------
+String name3 = new String("길동");
+-------------------------------------
+
+stack 영역    heap 영역   String 객체
+name1         길동
+
+Kim -> Lee -> Park -> Song -> NULL
+A1) --> LinkedList1 
+
+컴포지션 : 클래스에서 다른 클래스의 오브젝트의 객체를 생성하는 것
+
+Q2) 자료를 입력하시오(Scanner사용)
+  ==> 자료 입력 마침 문자는 : *
+    21 43 50 74 *
+  ==> 리스트 출력
+    21 -> 43 -> 50 -> 74 -> null;
+  
+Q3) LinkedList1을 for문의 형식으로 변경 (kim, lee, park, song) ==> 배열화 하여 작업
