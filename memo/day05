@@ -93,3 +93,19 @@ class Node {
   
   Node makeN() 
 }
+
+끊어진 노드를 다음 노드로 변경
+Node tmp = L;
+Node position = L;
+while(tmp != null && x != (Integer)tmp.data) {
+  position = tmp;
+  tmp = tmp.link; // 다음 노드로 변경
+}
+return position;
+} // position과 tmp 둘 다 같음
+// 처음 노드 삭제하는 작업
+
+tmp = position.link;
+position.link = tmp.link;
+// position과 tmp를 서로 분리
+// 중간 노드 삭제하는 
