@@ -83,11 +83,20 @@ front / rear는 -1을 선언한다. 데이터를 처음 삽입하면 같은 곳�
 front 0 : 경계 --> 선형 큐와 달리 -1이 존재하지 않기 때문에 front / rear를 경계에다 둔다.
 
 데크 : 데이터가 들어오는 통로가 삽입/삭제 둘 다 가능(기존 큐는 한쪽에서만 삽입/삭제 가능)
+enqueue(front, x) : front 방향으로 데이터를 삽입
+enqueue(rear, x) : rear 방향으로 데이터를 삽입
+단, 데이터가 rear 방향으로 삽입해도 front쪽으로 이동하게 된다. 
 
 큐의 구조
-queue[]
-numItem : 총 원소 수를 나타낸다.
+numItem() : 총 원소 수를 나타낸다.
 front() : 맨 앞의 원소 가리킨다
 rear(tail) : 맨 뒤의 원소 가리킨다.
 enqueue() : 데이터를 삽입하는 함수(in), dequeue() : 데이터를 삭제하는 함수(out)
 * isEmpty() / dequeueAll() : 큐의 데이터를 모두 삭제한다.
+
+연결 큐 ==> 단방향, 양방향, 원형, 더미 노드 유뮤 등 다양한 선택지를 가지고 있다.
+enqueue()
+dequeue()
+front()
+isEmpty() // 양방향, 원형 등 다양한 선택지를 가지고 있기 때문에 필요하다.
+dequeueAll()
