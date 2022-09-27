@@ -13,11 +13,11 @@ class Node2 {
 		Object data;
 		Node2 link;
 		void makeN() {
-			int i;
 			Node2 L = null, end;
 			Node2 tmp1 = new Node2();
-			end = L; // ¸¶Áö¸· ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö
+			end = L; // ë§ˆì§€ë§‰ ë…¸ë“œë¥¼ ê°€ë¦¬í‚¤ëŠ” ë³€ìˆ˜
 		
+		System.out.print("ì •ìˆ˜ ìž…ë ¥(ë§ˆì¹¨ ë¬¸ìžëŠ” *) --> ");
 		Scanner sc = new Scanner(System.in);
 		while(true) {
 			String s = sc.next();
@@ -25,8 +25,8 @@ class Node2 {
 				break;
 			tmp1 = new Node2();
 			tmp1.data = s;
+			System.out.print(tmp1.data + " -> ");
 		}
-		
-	}
-		
+		System.out.println("null");
+	}	
 }
