@@ -1,35 +1,39 @@
 package nodeExample;
 
-class Node {
-		Object data; // String Å¸ÀÔÀº °°Àº °ªÀÌ¸é °øÀ¯ÇÒ ¼ö ÀÖ´Ù.
-		// º¯¼ö¸íÀº stack ¿µ¿ª, µ¥ÀÌÅÍ´Â heap ¿µ¿ª¿¡ ÀúÀå
-		Node link; // ÀÚ±â ÀÚ½ÅÀ» ÂüÁ¶ÇÏ´Â link
+public class LinkedList1 {
+	public static void main(String[] args) {
+		Node L = new Node();
+		L.data = "Kim";
+		L.link = null;
 		
-		void printList(Node d) {
-			while(d != null) {
-				System.out.print(d.data + " -> ");
-				d = d.link;
-			}
-			System.out.println("null");
-		}
+		Node tmp = new Node();
+		tmp.data = "Lee";
+		L.link = tmp; // Kimë’¤ì— Lee ì›ì†Œ ì—°ê²°
+		
+		Node tmp1 = new Node();
+		tmp1.data = "Park";
+		tmp.link = tmp1;
+		
+		Node tmp2 = new Node();
+		tmp2.data = "Song";
+		tmp1.link = tmp2;
+		
+		tmp2.link = null;
+		System.out.println("ë¦¬ìŠ¤íŠ¸ ì¶œë ¥");
+		L.printList(L);
 	}
-	
-	public class LinkedList1 {
-		public static void main(String[] args) {
-			Node L = new Node();
-			L.data = "Kim";
-			L.link = null;
-			
-			Node tmp = new Node();
-			tmp.data = "Lee";
-			L.link = tmp; // KimµÚ¿¡ Lee ¿ø¼Ò ¿¬°á
-			
-			Node tmp1 = new Node();
-			tmp1.data = "Park";
-			tmp.link = tmp1;
-			
-			tmp1.link = null;
-			System.out.println("¸®½ºÆ® Ãâ·Â");
-			L.printList(L);
+}
+
+class Node {
+	Object data; // String íƒ€ìž…ì€ ê°™ì€ ê°’ì´ë©´ ê³µìœ í•  ìˆ˜ ìžˆë‹¤.
+	// ë³€ìˆ˜ëª…ì€ stack ì˜ì—­, ë°ì´í„°ëŠ” heap ì˜ì—­ì— ì €ìž¥
+	Node link; // ìžê¸° ìžì‹ ì„ ì°¸ì¡°í•˜ëŠ” link
+		
+	void printList(Node d) {
+		while(d != null) {
+			System.out.print(d.data + " -> ");
+			d = d.link;
 		}
+		System.out.println("null");
 	}
+}
