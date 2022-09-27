@@ -11,31 +11,21 @@ class Node3 {
 	Object data;
 	Node3 link;
 	void makeN() {
-		Node3 L = null, tmp, end;
-		end = L; // ¸¶Áö¸· ³ëµå¸¦ °¡¸®Å°´Â º¯¼ö
-		
+		Node3 L = null, tmp;
 		String[] name = {"Kim", "Lee", "Park", "Song"};
-		int len = name.length;	// ¹è¿­ÀÇ Å©±â´Â(Á¤¼öÇü) ==> Integer.BYTES
+		int len = name.length;	// ë°°ì—´ì˜ í¬ê¸°ëŠ”(ì •ìˆ˜í˜•) ==> Integer.BYTES
 		
+		System.out.println("ë¦¬ìŠ¤íŠ¸ ì¶œë ¥");
 		for(int i = 0; i < len; i++) {
 			tmp = new Node3();
 			tmp.data = name[i];
 			if(L == null) {
-				L = tmp;
-				end = L;
+				L = tmp;	
 			} else {
 				link = tmp;
-				end = tmp;
 			}
-		}
-		System.out.println("¸®½ºÆ® Ãâ·Â");
-		L.printList(L);
-	}
-	
-	void printList(Node3 d) {
-		while(d != null) {
-			System.out.print(d.data + " -> ");
-			d = d.link;
+			// ë°ì´í„° ì›ì†Œ ì¶œë ¥
+			System.out.print(tmp.data + " -> ");
 		}
 		System.out.println("null");
 	}
