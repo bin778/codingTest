@@ -21,7 +21,7 @@ public class LinkedList5 {
 			}
 		}
 		
-		System.out.println("난수 오차순 정렬");
+		System.out.println("난수 오름차순 정렬");
 		Arrays.sort(arr);
 		for(int k : arr)
 			System.out.println(k + " ");
