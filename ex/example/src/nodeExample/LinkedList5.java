@@ -21,7 +21,7 @@ public class LinkedList5 {
 			}
 		}
 		
-		System.out.println("¿À¸§Â÷¼ø");
+		System.out.println("ë‚œìˆ˜ ì˜¤ì°¨ìˆœ ì •ë ¬");
 		Arrays.sort(arr);
 		for(int k : arr)
 			System.out.println(k + " ");
