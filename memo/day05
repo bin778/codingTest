@@ -78,7 +78,7 @@ Node search(Node L, int x) { // 삽입할 위치 검색(단, 알고리즘이기 
 tmp = position.link; // pos 후행 노드를 tmp가 가리킴
 position.link = inaNode; // pos뒤에 삽입할 노드 inaNode 연결
 inaNode.data = x; // inaNode의 자료에 데이터 저장
-inaNode/link = tmp; // inaNode 뒤에 tmp 연결
+inaNode.link = tmp; // inaNode 뒤에 tmp 연결
 
 Node obj = new Node();
 Node L = null;
