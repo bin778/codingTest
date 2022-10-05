@@ -18,14 +18,14 @@ public class LinkedList6 {
         }
 
         void scanData(String guide, int sw) {
-            System.out.println(guide + "ÇÒ µ¥ÀÌÅÍ¸¦ ÀÔ·Â.");
+            System.out.println(guide + "í•  ë°ì´í„°ë¥¼ ì…ë ¥.");
 
             if ((sw & NO) == NO) {
-                System.out.print("¹øÈ£: ");
+                System.out.print("ë²ˆí˜¸: ");
                 no = stdIn.nextInt();
             }
             if ((sw & NAME) == NAME) {
-                System.out.print("ÀÌ¸§: ");
+                System.out.print("ì´ë¦„: ");
                 name = stdIn.next();
             }
         }
@@ -50,18 +50,18 @@ public class LinkedList6 {
     }
 
     enum Menu {
-        ADD_FIRST(  "¸Ó¸® ³ëµå »ğÀÔ"),
-        ADD_LAST(   "²¿¸® ³ëµå »ğÀÔ"),
-        RMV_FIRST(  "¸Ó¸® ³ëµå »èÁ¦"),
-        RMV_LAST(   "²¿¸® ³ëµå »èÁ¦"),
-        RMV_CRNT(   "¼±ÅÃ ³ëµå »èÁ¦"),
-        CLEAR(      "ÀüÃ¼ ³ëµå »èÁ¦"),
-        SEARCH_NO(  "¹øÈ£ °Ë»ö"),
-        SEARCH_NAME("ÀÌ¸§ °Ë»ö"),
-        NEXT(       "¼±ÅÃ ³ëµå¸¦ ÇÏ³ª µÚÂÊÀ¸·Î ÁøÇà"),
-        PRINT_CRNT( "¼±ÅÃ ³ëµå Ç¥½Ã"),
-        DUMP(       "ÀüÃ¼ ³ëµå Ç¥½Ã"),
-        TERMINATE(  "Á¾·á");
+        ADD_FIRST(  "ë¨¸ë¦¬ ë…¸ë“œ ì‚½ì…"),
+        ADD_LAST(   "ê¼¬ë¦¬ ë…¸ë“œ ì‚½ì…"),
+        RMV_FIRST(  "ë¨¸ë¦¬ ë…¸ë“œ ì‚­ì œ"),
+        RMV_LAST(   "ê¼¬ë¦¬ ë…¸ë“œ ì‚­ì œ"),
+        RMV_CRNT(   "ì„ íƒ ë…¸ë“œ ì‚­ì œ"),
+        CLEAR(      "ì „ì²´ ë…¸ë“œ ì‚­ì œ"),
+        SEARCH_NO(  "ë²ˆí˜¸ ê²€ìƒ‰"),
+        SEARCH_NAME("ì´ë¦„ ê²€ìƒ‰"),
+        NEXT(       "ì„ íƒ ë…¸ë“œë¥¼ í•˜ë‚˜ ë’¤ìª½ìœ¼ë¡œ ì§„í–‰"),
+        PRINT_CRNT( "ì„ íƒ ë…¸ë“œ í‘œì‹œ"),
+        DUMP(       "ì „ì²´ ë…¸ë“œ í‘œì‹œ"),
+        TERMINATE(  "ì¢…ë£Œ");
 
         private final String message;               
 
@@ -110,13 +110,13 @@ public class LinkedList6 {
              
              case ADD_FIRST :                           
                     data = new Data();
-                     data.scanData("¸Ó¸®¿¡ »ğÀÔ", Data.NO | Data.NAME);
+                     data.scanData("ë¨¸ë¦¬ì— ì‚½ì…", Data.NO | Data.NAME);
                     list.addFirst(data);
                      break;
 
              case ADD_LAST :                           
                     data = new Data();
-                     data.scanData("²¿¸®¿¡ »ğÀÔ", Data.NO | Data.NAME);
+                     data.scanData("ê¼¬ë¦¬ì— ì‚½ì…", Data.NO | Data.NAME);
                      list.addLast(data);
                      break;
 
@@ -133,21 +133,21 @@ public class LinkedList6 {
                     break;
 
              case SEARCH_NO :                           
-                     temp.scanData("°Ë»ö", Data.NO);
+                     temp.scanData("ê²€ìƒ‰", Data.NO);
                     ptr = list.search(temp, Data.NO_ORDER);
                     if (ptr == null)
-                        System.out.println("±× ¹øÈ£ÀÇ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+                        System.out.println("ê·¸ ë²ˆí˜¸ì˜ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
                     else
-                        System.out.println("°Ë»ö ¼º°ø: " + ptr);
+                        System.out.println("ê²€ìƒ‰ ì„±ê³µ: " + ptr);
                      break;
 
              case SEARCH_NAME :                       
-                     temp.scanData("°Ë»ö", Data.NAME);
+                     temp.scanData("ê²€ìƒ‰", Data.NAME);
                     ptr = list.search(temp, Data.NAME_ORDER);
                     if (ptr == null)
-                        System.out.println("±× ÀÌ¸§ÀÇ µ¥ÀÌÅÍ°¡ ¾ø½À´Ï´Ù.");
+                        System.out.println("ê·¸ ì´ë¦„ì˜ ë°ì´í„°ê°€ ì—†ìŠµë‹ˆë‹¤.");
                     else
-                        System.out.println("°Ë»ö ¼º°ø: " + ptr);
+                        System.out.println("ê²€ìƒ‰ ì„±ê³µ: " + ptr);
                      break;
 
              case NEXT :                                 
